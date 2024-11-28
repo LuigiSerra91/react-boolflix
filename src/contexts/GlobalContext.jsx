@@ -4,25 +4,30 @@ const GlobalContext = createContext()
 
 
 export const GlobalProvider = ({ children }) => {
+    const apiKey = 'api_key=5667e5d0910ad3a58cc0b5de1556539c'
+    const apiUrl ='https://api.themoviedb.org/3/search/movie?'
     const [task, setTask] = useState([])
-    const fetchData = (url = 'https://api.themoviedb.org/3/search/movie?api_key=5667e5d0910ad3a58cc0b5de1556539c&query=tarzan') => {
-        fetch(url)
+    const [searchQuery, setSearchQuery] = useState(''); 
+    const fetchData = (query = searchQuery) => {
+        fetch(`${apiUrl}${apiKey}&query=${query}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            setTask(data.results, [])
+            setTask(data.results)
         }).catch(err => {
             console.error('errore nel caricamento dei dati', err)
         })
     }
 
     useEffect(() => {
-        fetchData()
-    },[])
+        if (searchQuery) {
+            fetchData();
+        }
+    }, [searchQuery]);
     
 
     return (
-        <GlobalContext.Provider value= {{task, fetchData}}>
+        <GlobalContext.Provider value= {{task, fetchData, searchQuery, setSearchQuery}}>
             {children}
         </GlobalContext.Provider>
     )

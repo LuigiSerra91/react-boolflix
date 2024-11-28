@@ -1,0 +1,9 @@
+img{
+    max-width: 100%;
+}
+
+.card{
+    img{
+        width: 150px;
+    }
+}

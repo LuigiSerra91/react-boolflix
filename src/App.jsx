@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import AppMain from './components/AppMain';
+
 import { GlobalProvider } from './contexts/GlobalContext';
 
-const api_url = 'https://api.themoviedb.org/3/search/movie?api_key=5667e5d0910ad3a58cc0b5de1556539c'
+import AppHeader from './components/AppHeader'
+
+import MoviesList from './pages/MoviesList';
 function App() {
-  const url ='https://api.themoviedb.org/3/search/movie?api_key=5667e5d0910ad3a58cc0b5de1556539c&query=tarzan' ;
+
 
 
 
   return (
     <GlobalProvider>
-      <AppMain/>
+      <AppHeader/>
+      <MoviesList/>
+
     </GlobalProvider>
   )
 }
