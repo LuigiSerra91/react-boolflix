@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useGlobalContext } from '../contexts/GlobalContext';
-
+import  Flag from 'react-world-flags'
 export default function MoviesList() {
     const { task, fetchData } = useGlobalContext();
 
