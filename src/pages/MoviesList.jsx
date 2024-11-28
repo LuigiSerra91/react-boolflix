@@ -10,7 +10,15 @@ export default function MoviesList() {
             fetchData();
         }
     }, [task, fetchData]);
-
+   
+    const flags = {
+        en: 'gb',
+        it: 'it',
+        fr: 'fr',
+        ja: 'jp',
+        ru: 'ru',
+        de: 'de'
+    }
     return (
         <>
 
@@ -25,7 +33,7 @@ export default function MoviesList() {
                                     <ul>
                                         <li>{post.title}</li>
                                         <li>{post.original_title}</li>
-                                        <li>  <Flag code={post.original_language} style={{ height: 40 }} /></li>
+                                        <li> Languages:  <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
                                         <li>{post.vote_average}</li>
                                         <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                     </ul>
