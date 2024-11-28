@@ -17,4 +17,21 @@ function fetchData(url ='https://api.themoviedb.org/3/search/movie?api_key=5667e
 }
 
 useEffect(fetchData, [])
+
+
+return (
+    <>
+      {task.results ? task.results.map(post => <div className="col-4 p-3" key={post.id}>
+
+         <ul>
+            <li>{post.title}</li>
+            <li>{post.original_title}</li>
+            <li>{post.original_language}</li>
+            <li>{post.vote_average}</li>
+         </ul>
+
+</div>) : <p>no result</p>}
+    
+    </>
+)
 }
