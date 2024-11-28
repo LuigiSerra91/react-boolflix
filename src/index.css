@@ -6,4 +6,11 @@ img{
     img{
         width: 150px;
     }
+}.img-back{
+    background-image: url('../public/img/luigiflex.png');
+    height: 100px;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
 }

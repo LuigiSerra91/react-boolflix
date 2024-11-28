@@ -11,7 +11,15 @@ const Search = () => {
         <>
 
             <div className="container">
+                <div className="back d-flex justify-content-center">
+                    <div className="img-back">
+
+                    </div>
+                </div>
+
+
                 <h1>ecco la lista dei film</h1>
+
                 <input
                     type="text"
                     value={searchQuery}
