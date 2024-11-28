@@ -17,7 +17,8 @@ export default function MoviesList() {
         fr: 'fr',
         ja: 'jp',
         ru: 'ru',
-        de: 'de'
+        de: 'de',
+        es: 'es'
     }
     return (
         <>
