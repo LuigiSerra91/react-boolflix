@@ -4,30 +4,16 @@ import Flag from 'react-world-flags'
 export default function MoviesList() {
     const { task, fetchData, searchQuery, setSearchQuery } = useGlobalContext();
 
-    // Effettua la chiamata AJAX (se necessaria) quando il componente viene montato
-   
-
-
-
-
-
-
+    
 
     const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);  // Aggiorna il valore della query di ricerca
+        setSearchQuery(e.target.value);  
     };
 
     const handleSearchClick = () => {
-        // Esegui la ricerca al click del bottone
-        fetchData(searchQuery);  // Invoca fetchData con la query di ricerca
+        // 
+        fetchData(searchQuery);  // 
     };
-
-
-
-
-
-
-
 
     const flags = {
         en: 'gb',
@@ -44,7 +30,7 @@ export default function MoviesList() {
             <div className="container">
                 <div className="back d-flex justify-content-center">
                     <div className="img-back">
-                        {/* Puoi mettere uno sfondo o altre informazioni qui */}
+
                     </div>
                 </div>
 
@@ -53,7 +39,7 @@ export default function MoviesList() {
                 <input
                     type="text"
                     value={searchQuery}
-                    onChange={handleSearchChange}  // Gestisci il cambiamento del testo nella barra di ricerca
+                    onChange={handleSearchChange}  //  cambiamento del testo nella barra di ricerca
                     placeholder="Search for a movie..."
                 />
 
