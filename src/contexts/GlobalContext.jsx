@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
         if (searchQuery) {
             fetchData();
         }
-    }, [searchQuery]);
+    }, []);
     
 
     return (
