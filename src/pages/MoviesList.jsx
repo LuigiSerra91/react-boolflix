@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useGlobalContext } from '../contexts/GlobalContext';
-import  Flag from 'react-world-flags'
+import Flag from 'react-world-flags'
 export default function MoviesList() {
     const { task, fetchData } = useGlobalContext();
 
@@ -25,7 +25,7 @@ export default function MoviesList() {
                                     <ul>
                                         <li>{post.title}</li>
                                         <li>{post.original_title}</li>
-                                        <li>{post.original_language}</li>
+                                        <li>  <Flag code={post.original_language} style={{ height: 40 }} /></li>
                                         <li>{post.vote_average}</li>
                                         <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                     </ul>
