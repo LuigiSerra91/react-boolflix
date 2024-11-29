@@ -4,9 +4,9 @@ import Flag from 'react-world-flags'
 export default function MoviesList() {
     const { task } = useGlobalContext();
 
-    
 
-    
+
+
 
     const flags = {
         en: 'gb',
@@ -19,8 +19,21 @@ export default function MoviesList() {
     }
 
 
+    const stars = (vote) => {
+        const oneToFive = Math.ceil(vote * 0.5)
+        const stars = []
 
-    
+        for (let i = 1; i <= 5; i++) {
+            if (i <= oneToFive) {
+                stars.push(<i key={i} className="bi bi-star-fill text-warning me-2"></i>); 
+            } else {
+                stars.push(<i key={i} className="bi bi-star text-warning me-2"></i>);
+            }
+        }
+
+        return stars
+    }
+
 
 
     return (
@@ -37,7 +50,7 @@ export default function MoviesList() {
                                         <li>{post.title}</li>
                                         <li>{post.original_title}</li>
                                         <li> Languages:  <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
-                                        <li>{post.vote_average}</li>
+                                        <li>{stars(post.vote_average)}</li>
                                         <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                     </ul>
                                 </div>
@@ -51,6 +64,10 @@ export default function MoviesList() {
             ) : (
                 <p>No results</p>
             )}
+
+
+
+
         </>
     );
 }
