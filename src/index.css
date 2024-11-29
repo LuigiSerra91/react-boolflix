@@ -7,7 +7,7 @@ img{
    width: 300px;
     ul{
         list-style-type: none;
-    
+        line-height: 4rem;
     }
     
 }
@@ -27,3 +27,24 @@ footer{
     height: 60px;
     margin-bottom: 0;
 }
+
+
+.card {
+    position: relative;
+  }
+  
+  .card .card-hover {
+    display: none;  /* Nascondi l'ul di default */
+    position: absolute;  /* Assicurati che l'ul non sposti il contenuto della card */
+    bottom: 0;  /* Posiziona l'ul nella parte inferiore della card, o dove preferisci */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro con opacità */
+    color: white;
+    padding: 10px;
+    height: 100%;
+  }
+  
+  .card:hover .card-hover {
+    display: block;  /* Mostra l'ul quando si passa sopra la card */
+  }

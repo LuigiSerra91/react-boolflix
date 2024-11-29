@@ -45,8 +45,15 @@ export default function MoviesList() {
 
                             
                                 <div className="card">
-                                    
                                     <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
+                                    <ul className='card-hover bg-black text-white'>
+                                    <li>{post.title}</li>
+                                        <li>{post.original_title}</li>
+                                        <li> Languages: <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
+                                        <li>{stars(post.vote_average)}</li>
+                                        <li>{post.original_name}</li>
+                                
+                                    </ul>
                                 </div>
                             
 
