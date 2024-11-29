@@ -6,6 +6,7 @@ const GlobalContext = createContext()
 export const GlobalProvider = ({ children }) => {
     const apiKey = import.meta.env.VITE_API_KEY
     const apiUrl ='https://api.themoviedb.org/3/search/movie?'
+    const seriesUrl = 'https://api.themoviedb.org/3/search/tv?'
     const [task, setTask] = useState([])
     const [searchQuery, setSearchQuery] = useState(''); 
     const fetchData = (query = searchQuery) => {
@@ -17,14 +18,16 @@ export const GlobalProvider = ({ children }) => {
         }).catch(err => {
             console.error('errore nel caricamento dei dati', err)
         })
+       
+
     }
 
     useEffect(() => {
         if (searchQuery) {
-            fetchData();
+            fetchData();    
         }
     }, []);
-     const seriesUrl = 'https://api.themoviedb.org/3/search/tv?'
+     
      
     const fetchDataSeries = (query = searchQuery) => {
         fetch(`${seriesUrl}api_key=${apiKey}&query=${query}`)
@@ -35,15 +38,15 @@ export const GlobalProvider = ({ children }) => {
         }).catch(err => {
             console.error('errore nel caricamento dei dati', err)
         })
+       
+
     }
 
     useEffect(() => {
         if (searchQuery) {
-            fetchDataSeries();
+            fetchDataSeries();    
         }
     }, []);
-
-
 
     
 const values = {
@@ -51,7 +54,7 @@ const values = {
     fetchData,
     searchQuery,
     setSearchQuery,
-    fetchDataSeries
+    
 
 }
     return (
