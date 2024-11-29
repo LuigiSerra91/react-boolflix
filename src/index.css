@@ -3,8 +3,9 @@ img {
 }
 
 .card {
-    
+    box-shadow: 10px 10px 10px rgb(185, 52, 52);
     width: 300px;
+    
 
     ul {
         list-style-type: none;
@@ -12,7 +13,6 @@ img {
     }
 
 }
-
 
 .img-back {
     background-image: url('../img/luigiflex.png');

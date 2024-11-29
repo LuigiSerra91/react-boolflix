@@ -62,8 +62,7 @@ export default function MoviesList() {
 
                         </div>
                     ))
-                ) : (
-                    <p>No results</p>
+                ) : (<p>No results</p>
                 )}
             </div>
 
