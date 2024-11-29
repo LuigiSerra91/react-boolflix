@@ -30,7 +30,7 @@ export default function SearchFilm() {
                     placeholder="Search for a movie..."
                 />
 
-                {/* Bottone che avvia la ricerca */}
+           
                 <button
                     type="button"
                     className="btn btn-primary"

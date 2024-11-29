@@ -5,7 +5,7 @@ import dataFlags from '../data/dataFlags';
 export default function MoviesList() {
     const { task } = useGlobalContext();
 
-    
+
 
     const stars = (vote) => {
         const oneToFive = Math.ceil(vote * 0.5)
@@ -28,8 +28,6 @@ export default function MoviesList() {
                 {task.length > 0 ? (
                     task.map(post => (
                         <div className=" col-3 p-3" key={post.id}>
-
-
                             <div className="card">
                                 <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                 <ul className='card-hover bg-black text-white'>
@@ -41,11 +39,6 @@ export default function MoviesList() {
 
                                 </ul>
                             </div>
-
-
-
-
-
                         </div>
                     ))
                 ) : (<p>No results</p>
