@@ -3,7 +3,7 @@ img {
 }
 
 .card {
-
+    
     width: 300px;
 
     ul {
@@ -42,8 +42,8 @@ footer {
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
     height: 100%;
+    margin: auto;
 }
 
 .card:hover .card-hover {
