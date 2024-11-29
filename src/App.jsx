@@ -3,7 +3,7 @@ import { GlobalProvider } from './contexts/GlobalContext';
 
 import AppHeader from './components/AppHeader'
 import AppFooter from './components/AppFooter'
-import MoviesList from './pages/MoviesList';
+import AppMain from './components/AppMain';
 function App() {
 
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <GlobalProvider>
       <AppHeader/>
-      <MoviesList/>
+      <AppMain/>
       <AppFooter/>
     </GlobalProvider>
   )

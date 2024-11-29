@@ -1,24 +1,7 @@
-
-
-import { useGlobalContext } from '../contexts/GlobalContext';
+import SearchFilm from './SearchFilm';
 export default function AppHeader() {
 
-    const { searchQuery, setSearchQuery, fetchData } = useGlobalContext();
 
-
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-    };
-
-    const handleSearchClick = () => {
-        // 
-        if (searchQuery.trim()) {
-            fetchData(searchQuery);
-
-        }
-
-        // 
-    };
     return (
         <>
             <header className="bg-black d-flex justify-content-between align-items-center p-2">
@@ -28,30 +11,7 @@ export default function AppHeader() {
                     </div>
                 </div>
 
-
-
-
-
-
-
-                <div className='d-flex gap-3'>
-                    <input
-                        type="text"
-                        value={searchQuery}
-                        onChange={handleSearchChange}  //  cambiamento del testo nella barra di ricerca
-                        placeholder="Search for a movie..."
-                    />
-
-                    {/* Bottone che avvia la ricerca */}
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        onClick={handleSearchClick}  // Avvia la ricerca quando cliccato
-                    >
-                        Search
-                    </button>
-                </div>
-
+                <SearchFilm />
 
             </header>
         </>

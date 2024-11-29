@@ -1,23 +1,11 @@
 
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Flag from 'react-world-flags'
+import dataFlags from '../data/dataFlags';
 export default function MoviesList() {
     const { task } = useGlobalContext();
 
-
-
-
-
-    const flags = {
-        en: 'gb',
-        it: 'it',
-        fr: 'fr',
-        ja: 'jp',
-        ru: 'ru',
-        de: 'de',
-        es: 'es'
-    }
-
+    
 
     const stars = (vote) => {
         const oneToFive = Math.ceil(vote * 0.5)
@@ -34,8 +22,6 @@ export default function MoviesList() {
         return stars
     }
 
-
-
     return (
         <main className='bg-secondary'>
             <div className="row p-3">
@@ -49,7 +35,7 @@ export default function MoviesList() {
                                 <ul className='card-hover bg-black text-white'>
                                     <li>{post.title}</li>
                                     <li>{post.original_title}</li>
-                                    <li> Languages: <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
+                                    <li> Languages: <Flag code={dataFlags[post.original_language]} style={{ height: 20 }} /></li>
                                     <li>{stars(post.vote_average)}</li>
                                     <li>{post.original_name}</li>
 
