@@ -13,7 +13,7 @@ function App() {
     <GlobalProvider>
       <AppHeader/>
       <MoviesList/>
-   
+      <AppFooter/>
     </GlobalProvider>
   )
 }
