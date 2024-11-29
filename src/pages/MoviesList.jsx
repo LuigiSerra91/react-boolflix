@@ -38,22 +38,17 @@ export default function MoviesList() {
 
     return (
         <>
-            <div className="row">
+            <div className="row p-3">
                 {task.length > 0 ? (
                     task.map(post => (
                         <div className=" col-3 p-3" key={post.id}>
 
-                            <div className="card">
+                            
                                 <div className="card">
-                                    <ul>
-                                        <li>{post.title}</li>
-                                        <li>{post.original_title}</li>
-                                        <li> Languages: <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
-                                        <li>{stars(post.vote_average)}</li>
-                                        <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
-                                    </ul>
+                                    
+                                    <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                 </div>
-                            </div>
+                            
 
 
 

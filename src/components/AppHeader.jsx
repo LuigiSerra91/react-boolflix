@@ -3,7 +3,7 @@
 import { useGlobalContext } from '../contexts/GlobalContext';
 export default function AppHeader() {
 
-    const { searchQuery, setSearchQuery, fetchData, fetchDataSeries } = useGlobalContext();
+    const { searchQuery, setSearchQuery, fetchData } = useGlobalContext();
 
 
     const handleSearchChange = (e) => {
@@ -14,7 +14,7 @@ export default function AppHeader() {
         // 
         if (searchQuery.trim()) {
             fetchData(searchQuery);
-            
+
         }
 
         // 

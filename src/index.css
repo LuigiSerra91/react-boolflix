@@ -3,16 +3,24 @@ img{
 }
 
 .card{
-    img{
-        width: 150px;
+    
+   width: 300px;
+    ul{
+        list-style-type: none;
+    
     }
-}.img-back{
+    
+}
+
+
+.img-back{
     background-image: url('../img/luigiflex.png');
     height: 100px;
     background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
+  
 }
 
 footer{
