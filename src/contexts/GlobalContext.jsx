@@ -25,9 +25,15 @@ export const GlobalProvider = ({ children }) => {
         }
     }, []);
     
+const values = {
+    task,
+    fetchData,
+    searchQuery,
+    setSearchQuery
 
+}
     return (
-        <GlobalContext.Provider value= {{task, fetchData, searchQuery, setSearchQuery}}>
+        <GlobalContext.Provider value= {values}>
             {children}
         </GlobalContext.Provider>
     )
