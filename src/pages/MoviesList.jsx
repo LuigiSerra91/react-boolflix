@@ -25,7 +25,7 @@ export default function MoviesList() {
 
         for (let i = 1; i <= 5; i++) {
             if (i <= oneToFive) {
-                stars.push(<i key={i} className="bi bi-star-fill text-warning me-2"></i>); 
+                stars.push(<i key={i} className="bi bi-star-fill text-warning me-2"></i>);
             } else {
                 stars.push(<i key={i} className="bi bi-star text-warning me-2"></i>);
             }
@@ -38,32 +38,34 @@ export default function MoviesList() {
 
     return (
         <>
+            <div className="row">
+                {task.length > 0 ? (
+                    task.map(post => (
+                        <div className=" col-3 p-3" key={post.id}>
 
-
-            {task.length > 0 ? (
-                task.map(post => (
-                    <div className="container p-3" key={post.id}>
-                        <div className='row'>
-                            <div className="col">
+                            <div className="card">
                                 <div className="card">
                                     <ul>
                                         <li>{post.title}</li>
                                         <li>{post.original_title}</li>
-                                        <li> Languages:  <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
+                                        <li> Languages: <Flag code={flags[post.original_language]} style={{ height: 20 }} /></li>
                                         <li>{stars(post.vote_average)}</li>
                                         <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                                     </ul>
                                 </div>
                             </div>
+
+
+
+
                         </div>
+                    ))
+                ) : (
+                    <p>No results</p>
+                )}
+            </div>
 
 
-
-                    </div>
-                ))
-            ) : (
-                <p>No results</p>
-            )}
 
 
 
