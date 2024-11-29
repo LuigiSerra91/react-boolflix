@@ -7,10 +7,15 @@ img{
         width: 150px;
     }
 }.img-back{
-    background-image: url('../public/img/luigiflex.png');
+    background-image: url('../img/luigiflex.png');
     height: 100px;
     background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
+}
+
+footer{
+    height: 60px;
+    margin-bottom: 0;
 }
