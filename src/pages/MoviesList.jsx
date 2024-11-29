@@ -37,7 +37,7 @@ export default function MoviesList() {
 
 
     return (
-        <>
+        <main className='bg-secondary'>
             <div className="row p-3">
                 {task.length > 0 ? (
                     task.map(post => (
@@ -72,6 +72,6 @@ export default function MoviesList() {
 
 
 
-        </>
+        </main>
     );
 }
