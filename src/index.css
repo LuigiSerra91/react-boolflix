@@ -1,29 +1,30 @@
-img{
+img {
     max-width: 100%;
 }
 
-.card{
-    
-   width: 300px;
-    ul{
+.card {
+
+    width: 300px;
+
+    ul {
         list-style-type: none;
         line-height: 4rem;
     }
-    
+
 }
 
 
-.img-back{
+.img-back {
     background-image: url('../img/luigiflex.png');
     height: 100px;
     background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
-  
+
 }
 
-footer{
+footer {
     height: 60px;
     margin-bottom: 0;
 }
@@ -31,20 +32,20 @@ footer{
 
 .card {
     position: relative;
-  }
-  
-  .card .card-hover {
-    display: none;  /* Nascondi l'ul di default */
-    position: absolute;  /* Assicurati che l'ul non sposti il contenuto della card */
-    bottom: 0;  /* Posiziona l'ul nella parte inferiore della card, o dove preferisci */
+}
+
+.card .card-hover {
+    display: none;
+    position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro con opacità */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
     height: 100%;
-  }
-  
-  .card:hover .card-hover {
-    display: block;  /* Mostra l'ul quando si passa sopra la card */
-  }
+}
+
+.card:hover .card-hover {
+    display: block;
+}
