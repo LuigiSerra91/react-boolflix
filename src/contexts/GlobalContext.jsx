@@ -24,12 +24,34 @@ export const GlobalProvider = ({ children }) => {
             fetchData();
         }
     }, []);
+     const seriesUrl = 'https://api.themoviedb.org/3/search/tv?'
+     
+    const fetchDataSeries = (query = searchQuery) => {
+        fetch(`${seriesUrl}api_key=${apiKey}&query=${query}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setTask(data.results)
+        }).catch(err => {
+            console.error('errore nel caricamento dei dati', err)
+        })
+    }
+
+    useEffect(() => {
+        if (searchQuery) {
+            fetchDataSeries();
+        }
+    }, []);
+
+
+
     
 const values = {
     task,
     fetchData,
     searchQuery,
-    setSearchQuery
+    setSearchQuery,
+    fetchDataSeries
 
 }
     return (
