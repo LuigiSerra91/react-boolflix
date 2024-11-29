@@ -4,12 +4,12 @@ const GlobalContext = createContext()
 
 
 export const GlobalProvider = ({ children }) => {
-    const apiKey = 'api_key=5667e5d0910ad3a58cc0b5de1556539c'
+    const apiKey = import.meta.env.VITE_API_KEY
     const apiUrl ='https://api.themoviedb.org/3/search/movie?'
     const [task, setTask] = useState([])
     const [searchQuery, setSearchQuery] = useState(''); 
     const fetchData = (query = searchQuery) => {
-        fetch(`${apiUrl}${apiKey}&query=${query}`)
+        fetch(`${apiUrl}api_key=${apiKey}&query=${query}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
