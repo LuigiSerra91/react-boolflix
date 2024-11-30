@@ -2,25 +2,9 @@
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Flag from 'react-world-flags'
 import dataFlags from '../data/dataFlags';
+import AppStars from './AppStars';
 export default function MoviesList() {
     const { task } = useGlobalContext();
-
-
-
-    const stars = (vote) => {
-        const oneToFive = Math.ceil(vote * 0.5)
-        const stars = []
-
-        for (let i = 1; i <= 5; i++) {
-            if (i <= oneToFive) {
-                stars.push(<i key={i} className="bi bi-star-fill text-warning me-2"></i>);
-            } else {
-                stars.push(<i key={i} className="bi bi-star text-warning me-2"></i>);
-            }
-        }
-
-        return stars
-    }
 
     return (
         <main className='bg-secondary'>
@@ -34,7 +18,7 @@ export default function MoviesList() {
                                     <li>{post.title}</li>
                                     <li>{post.original_title}</li>
                                     <li> Languages: <Flag code={dataFlags[post.original_language]} style={{ height: 20 }} /></li>
-                                    <li>{stars(post.vote_average)}</li>
+                                    <li>{AppStars(post.vote_average)}</li>
                                     <li>{post.original_name}</li>
 
                                 </ul>
