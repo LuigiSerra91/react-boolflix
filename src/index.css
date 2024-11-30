@@ -5,7 +5,7 @@ img {
 .card {
     box-shadow: 10px 10px 10px rgb(185, 52, 52);
     width: 300px;
-    
+    position: relative;
 
     ul {
         list-style-type: none;
@@ -24,6 +24,7 @@ img {
 
 }
 
+
 footer {
     height: 60px;
     background-color: #333;
@@ -36,10 +37,6 @@ footer {
     width: 100%;
 }
 
-
-.card {
-    position: relative;
-}
 
 .card .card-hover {
     display: none;
@@ -55,4 +52,9 @@ footer {
 
 .card:hover .card-hover {
     display: block;
+}
+
+.bg-secondary{
+    height: 100dvh;
+    overflow-y: scroll;
 }

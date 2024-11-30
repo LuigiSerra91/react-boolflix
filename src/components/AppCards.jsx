@@ -26,7 +26,7 @@ export default function AppCards() {
                         </div>
                     </div>
                 ))
-            ) : (<p>No results</p>
+            ) : (<p><strong>No results</strong></p>
             )}
 
         </>
