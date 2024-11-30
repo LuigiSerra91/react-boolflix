@@ -27,7 +27,7 @@ export default function SearchFilm() {
                     type="text"
                     value={searchQuery}
                     onChange={handleSearchChange}  //  cambiamento del testo nella barra di ricerca
-                    placeholder="Search for a movie..."
+                    placeholder="Search movie and tv series"
                 />
 
            
