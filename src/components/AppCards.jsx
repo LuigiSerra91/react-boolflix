@@ -12,7 +12,7 @@ export default function AppCards() {
 
             {task.length > 0 ? (
                 task.map(post => (
-                    <div className=" col-3 p-3" key={post.id}>
+                    <div className="col p-3" key={post.id}>
                         <div className="card">
                             <img src={`https://image.tmdb.org/t/p/w500/${post.poster_path}`} alt="" />
                             <ul className='card-hover bg-black text-white'>

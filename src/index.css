@@ -23,18 +23,20 @@ img {
     width: 400px;
 
 }
-
-
+header{
+    h1{
+        font-weight: 300px;
+        font-size: 80px;
+    }
+}
 footer {
     height: 60px;
     background-color: #333;
-    
+    position: sticky;
+    bottom: 0;
+    right: 0;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 
@@ -54,7 +56,9 @@ footer {
     display: block;
 }
 
-.bg-secondary{
+/* .bg-secondary{
     height: 100dvh;
     overflow-y: scroll;
-}
+ 
+    
+} */
