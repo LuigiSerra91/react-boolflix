@@ -1,7 +1,7 @@
 import { useGlobalContext } from '../contexts/GlobalContext';
 
 export default function SearchFilm() {
-    const { searchQuery, setSearchQuery, fetchData } = useGlobalContext();
+    const { searchQuery, setSearchQuery, fetchData, fetchDataSeries } = useGlobalContext();
 
 
     const handleSearchChange = (e) => {
@@ -12,7 +12,7 @@ export default function SearchFilm() {
 
         if (searchQuery.trim()) {
             fetchData(searchQuery);
-
+           fetchDataSeries(searchQuery)
         }
 
 
